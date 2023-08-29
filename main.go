@@ -48,7 +48,7 @@ func main() {
 // }
 
 func getWeather(cityName string) (string, error) {
-	url := "https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13"
+	url := fmt.Sprintf("https://weatherapi-com.p.rapidapi.com/current.json?q=%s", cityName)
 
 	req, _ := http.NewRequest("GET", url, nil)
 
